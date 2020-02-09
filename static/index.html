@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Hola
+  </body>
+  <script type="text/javascript" defer>
+  import('/wasm')
+    .then(loader => loader.default("/wasm/bin"))
+    .catch(_=>console.log("file not loaded"))
+    .then(m=>m.greet("hola"))
+    .catch(console.error);
+  </script>
+</html>
